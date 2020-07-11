@@ -1,0 +1,121 @@
+
+
+
+/***********************
+ Contact
+****************************/
+
+.contact { 
+  border-top: 1px solid black;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 25rem;
+  flex-shrink: 0;
+  padding-left: 1rem;
+}
+
+.form-row {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.form-row > label {
+  width: 6rem;
+}
+
+.form-row > input, 
+.form-row > textarea {
+  width: 100%;
+}
+
+input, 
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+input {
+  height: 2rem;
+}
+
+textarea {
+  resize: none;
+  height: 7rem;
+}
+
+
+#submit {
+  width: max-content;
+  padding: 0.3rem;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  text-shadow: 0.2px 0px #00000057;
+}
+
+#submit:hover {
+  text-decoration: none;
+  color: #0034b1;
+  box-shadow: 0px 5px 5px -7px;
+  display: block;
+}
+
+/***********************
+ Contact - mobile
+****************************/
+@media (max-width: 752px) {
+
+  .contact {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact form {
+    padding: 0;
+    margin-top: 2rem;
+  }
+
+}
+
+@media (max-width: 526px) {
+
+  .contact form {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 440px) {
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-row label {
+    margin-bottom: 8px;
+  }
+
+}
+
+@media (max-width: 370px) {
+
+  main {
+    padding: 0 2rem 1rem 2rem;
+  }
+
+  .contact form {
+    min-width: 15rem;
+  }
+
+}

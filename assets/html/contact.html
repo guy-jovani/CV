@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet"> 
+    
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JQuery -->
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+    crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+    
+
+
+    <link rel="stylesheet" href="../styles/eric-meyers-reset.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/contact.css">
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../scripts/main.js" defer></script>
+    <script src="../scripts/contact.js" defer></script>
+  </head>
+  <body>
+    <nav>
+      <div>
+        <h3>Guy Jovany</h3>
+        <h5>Web Developer</h5>
+      </div> 
+      <button class="nav-open-collapsed" type="button">
+        <i class="glyphicon glyphicon-align-justify"></i>
+      </button>
+      <ul class="nav-closed-links">
+        <li>
+          <a href="../../index.html"><span>Home</span></a>
+        </li>
+        <li>
+          <a href="./resume.html"><span>Resume</span></a>
+        </li>
+        <li>
+          <a href="./projects.html"><span>Projects</span></a>
+        </li>
+        <li>
+            <a href="./contact.html"><span>Contact</span></a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h3 class="main-title">Contact</h3>
+
+      <section class="contact">
+        <p>Looking forward to hear from you.</p>
+        <form>
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter your name..">
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter an Email I can reach you at..">
+          </div>
+          <div class="form-row">
+            <label for="content">Content</label>
+            <textarea id="content" placeholder="What can i do for you?"></textarea>
+          </div>
+          <button id="submit" type="submit">Send</button>
+        </form>
+      </section>
+
+    </main>
+
+    <footer>
+      <address class="footer-general">
+        <i class="glyphicon glyphicon-envelope contact-icon"></i>
+        <span class="footer-details">
+          <span>Contact</span>
+          <a href="mailto:guy.jovany@huji.ac.il">guy.jovany@huji.ac.il</a>
+        </span>
+      </address>
+      <p class="footer-general">
+        <span class="footer-rights-icon">&copy</span>
+        <span class="footer-details">
+          <span>
+            Based on a template of <a href="https://wix.com" target="_blank">Wix.com <i class="glyphicon glyphicon-new-window"></i></a>
+          </span>
+        </span>
+      </p>
+    </footer>
+  </body>
+</html>

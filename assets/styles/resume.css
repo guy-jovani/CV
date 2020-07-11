@@ -1,0 +1,146 @@
+
+
+/***********************
+ Resume
+****************************/
+
+main {
+  flex-direction: row;
+}
+
+.main-resume {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.work-experience,
+.education {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+  border-top: 1px solid black;
+}
+
+.main-work-item {
+  margin-bottom: 1rem;
+  padding: 1rem 0;
+}
+
+.main-work-item:nth-child(n+2) {
+  border-top: 1px solid #00000029;
+}
+
+.main-work-item li {
+  margin-bottom: 1rem;
+}
+
+.main-work-item__details {
+  white-space: pre-line;
+}
+
+.main-work-item__details span {
+  font-weight: bold;
+}
+
+.education {
+  padding-bottom: 2rem;
+}
+
+.secondary-resume {
+  margin-top: 5rem;
+  margin-left: 2rem;
+  align-self: flex-start;
+  width: max-content;
+}
+
+.skills > div:first-of-type,
+.languages > ul:first-of-type {
+  margin-bottom: 2rem;
+  border-top: 1px solid black;
+  padding-top: 1rem;
+  padding-right: 1.5rem;
+}
+
+.skills-list {
+  display: flex;
+  width: max-content;
+  margin-bottom: 2rem;
+}
+
+.skills-list > li:first-child {
+  margin-right: 1.5rem;
+}
+
+
+/***********************
+ Resume - mobile
+****************************/
+
+
+
+@media (max-width: 815px) {
+  
+  .work-experience,
+  .education {
+    flex-direction: column;
+  }
+
+  .education > ul {
+    margin-top: 1rem;
+  }
+
+  .skills ul {
+    flex-direction: column;
+  }
+  
+  .skills-list > li {
+    padding-bottom: 1rem;
+  }
+
+  .skills > div:first-of-type,
+  .languages > ul:first-of-type {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 547px) {
+  
+  main {
+    flex-direction: column;
+    padding: 0 2rem 1rem 2rem;
+  }
+
+  .secondary-resume {
+    margin-top: 0;
+    margin-left: 3rem;
+    display: flex;
+  }
+
+  .skills ul {
+    flex-direction: row;
+  }
+
+  .languages {
+    margin-left: 2rem;
+  }
+
+}
+
+@media (max-width: 410px) {
+
+  .secondary-resume {
+    flex-direction: column;
+  }
+
+  .languages {
+    margin-left: 0;
+  }
+
+}
+
+
+
+
+

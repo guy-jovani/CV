@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet"> 
+    
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JQuery -->
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+    crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+    
+
+
+    <link rel="stylesheet" href="../styles/eric-meyers-reset.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/projects.css">
+
+    <script src="../scripts/main.js" defer></script>
+
+    <script src="../scripts/projects.js" defer></script>
+  </head>
+  <body>
+    <nav>
+      <div>
+        <h3>Guy Jovany</h3>
+        <h5>Web Developer</h5>
+      </div> 
+      <button class="nav-open-collapsed" type="button">
+        <i class="glyphicon glyphicon-align-justify"></i>
+      </button>
+      <ul class="nav-closed-links">
+        <li>
+          <a href="../../index.html"><span>Home</span></a>
+        </li>
+        <li>
+          <a href="./resume.html"><span>Resume</span></a>
+        </li>
+        <li>
+          <a href="./projects.html"><span>Projects</span></a>
+        </li>
+        <li>
+            <a href="./contact.html"><span>Contact</span></a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h3 class="main-title">Projects</h3>
+      <section class="projects">
+        <ul>
+          <li>
+
+            <div class="project-item">
+              <div class="carousel">
+                <img src="../images/js-main.PNG" alt="job-seeker-main-page" class="showed" data-img="0">
+                <img src="../images/js-posts.PNG" alt="job-seeker-posts" class="hide" data-img="1">
+                <img src="../images/js-applicants.PNG" alt="job-seeker-applicants" class="hide" data-img="2">
+  
+                <div class="carousel-arrows">
+                  <button type="button" class="carouselLeftArrow"><i class="arrow left"></i></button>
+                  <button type="button" class="carouselRightArrow"><i class="arrow right"></i></button>
+                </div>
+              </div>
+  
+              <div class="project-item__project-info">
+                <h6 class="secondary-title">Project #1</h6>
+                <h6>
+                  Web Development |
+                  <a
+                    href="https://jobseeker-68c66.firebaseapp.com/"
+                    target="_blank">
+                    job-seeker  <i class="glyphicon glyphicon-new-window"></i>
+                  </a>
+                </h6>
+                <p class="project-item__details">A website inspired by <a href="https://linkedin.com">LinkedIn <i class="glyphicon glyphicon-new-window"></i></a>, search for and offer jobs, employees, companies.
+                  Chat with the people that are registers and apply for positions.
+  
+                  Technology:
+                  <span>Back</span>: Node.js, Express, Mongoose, Socket.IO (Hosted at Heroku).
+                  <span>Front</span>: Angular 9 (NgRx, RxJS), CSS3/SCSS, Html5, Bootstrap, Socket.IO (Hosted at Firebase).
+                </p>
+              </div>
+            </div>
+              
+          </li>
+
+          <li>
+
+            <div class="project-item">
+              <div class="carousel">
+                <img src="../images/cv-home.PNG" alt="job-seeker-main-page" class="showed" data-img="0">
+                <img src="../images/cv-projects.PNG" alt="job-seeker-main-page" class="hide" data-img="1">
+  
+                <div class="carousel-arrows">
+                  <button type="button" class="carouselLeftArrow"><i class="arrow left"></i></button>
+                  <button type="button" class="carouselRightArrow"><i class="arrow right"></i></button>
+                </div>
+              </div>
+  
+              <div class="project-item__project-info">
+                <h6 class="secondary-title">Project #2</h6>
+                <h6>
+                  Web Development |
+                  This Website
+                </h6>
+                <p class="project-item__details">A website inspired by <a href="https://wix.com">Wix.com <i class="glyphicon glyphicon-new-window"></i></a>, to show a little more of my skills.
+  
+                  Technology:
+                  <span>Back</span>: Node.js, Express (Only for sending email in the contact page. Hosted at Heroku).
+                  <span>Front</span>: Vanilla JS, Vanilla CSS (only glyphicon by bootstrap was used), HTML5.
+                </p>
+              </div>
+            </div>
+              
+          </li>
+        </ul>
+      </section>
+
+    </main>
+
+    <footer>
+      <address class="footer-general">
+        <i class="glyphicon glyphicon-envelope contact-icon"></i>
+        <span class="footer-details">
+          <span>Contact</span>
+          <a href="mailto:guy.jovany@huji.ac.il">guy.jovany@huji.ac.il</a>
+        </span>
+      </address>
+      <p class="footer-general">
+        <span class="footer-rights-icon">&copy</span>
+        <span class="footer-details">
+          <span>
+            Based on a template of <a href="https://wix.com" target="_blank">Wix.com <i class="glyphicon glyphicon-new-window"></i></a>
+          </span>
+        </span>
+      </p>
+    </footer>
+  </body>
+</html>
