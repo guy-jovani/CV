@@ -371,7 +371,7 @@ FOOTER - mobile
 ***************************/
 
 
-@media (max-width: 530px) {
+@media (max-width: 620px) {
   footer {
     flex-direction: column;
     padding: 1rem 2rem;
