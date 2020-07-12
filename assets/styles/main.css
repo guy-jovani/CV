@@ -291,7 +291,7 @@ NAV BAR - mobile
   }
 
   .nav-open-collapsed:hover {
-    background-color: #7cebfdcf;
+    background-color: #40a0d71a;
   }
   
   nav {
@@ -300,18 +300,17 @@ NAV BAR - mobile
   }
   
   .nav-closed-links {
-    visibility: hidden;
     position: absolute;
-    transition: visibility 0.5s, background-color 0.5s;
+    transition: all 0.75s;
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;    
+    height: 100vh; 
+    opacity: 0;
   }
 
   .nav-opened-links {
-    visibility: visible;
-    background-color: #29d9d1;
+    background-image: url('../images/background.jpg');
     flex-direction: column;
     width: 100vw;
     height: 100vh;
@@ -321,7 +320,7 @@ NAV BAR - mobile
     align-items: center;
     padding-top: 100px;
     line-height: 2;
-    transition: background-color 0.5s;
+    opacity: 100;
   }
 
   .nav-opened-links li {
@@ -396,7 +395,7 @@ FOOTER - mobile
 ****************************/
 @media (max-width: 760px) {
 
-  .about i {
+  .about img {
     margin-right: 1rem;
   }
 
@@ -412,7 +411,7 @@ FOOTER - mobile
     flex-direction: column;
   }
 
-  .about i {
+  .about img {
     margin-bottom: 2rem;
     margin-right: 0;
   }

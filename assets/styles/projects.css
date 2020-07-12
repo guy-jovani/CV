@@ -96,7 +96,7 @@ section {
 
   .project-item__project-info > *:nth-child(n + 2) {
     position: relative;
-    top: -5rem;
+    top: -2rem;
   }
 }
 
