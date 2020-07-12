@@ -7,7 +7,6 @@
 
 const toggleNavBarBtn = document.querySelector('.nav-open-collapsed');
 const navLinks = document.querySelector('.nav-closed-links');
-console.log(toggleNavBarBtn)
 
 toggleNavBarBtn.addEventListener('click', () => {
   navLinks.classList.toggle('nav-opened-links');

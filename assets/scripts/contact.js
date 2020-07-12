@@ -12,14 +12,6 @@ submitBtn.addEventListener('click', event => {
     console.log('1111111')
   }
 
-  // console.log(inputs)
-  // console.log(inputs[0].lastElementChild)
-  // console.log(inputs[1].lastElementChild)
-  // console.log(inputs[2].lastElementChild)
-  // console.log(inputs[2].lastElementChild.id)
-
-
-
   axios.post('https://my-email-service.herokuapp.com/', {
     name: inputs[0].lastElementChild.value,
     email: inputs[1].lastElementChild.value,
