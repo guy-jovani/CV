@@ -107,7 +107,7 @@ section {
   }
 
   .carousel,
-  img {
+  .carousel > img {
     width: 12rem;
     height: 12rem;
   }
@@ -133,7 +133,7 @@ section {
 @media (max-width: 375px) {
 
   .carousel,
-  img {
+  .carousel > img {
     align-self: center;
     margin: 0 0 1.5rem 0;
   }
