@@ -46,6 +46,63 @@ carouselRightArrows.forEach(arrow => {
 
 
 
+const carousels = document.getElementsByClassName('carousel');
+const projectInfo = document.getElementsByClassName('project-item__project-info');
+
+
+const displayItems = () => {
+  for (let car of carousels) {
+    if (car.offsetTop < window.innerHeight + window.pageYOffset + 20) {
+      car.classList.add('display-from-side')
+    }
+  }
+  
+  for (let pi of projectInfo) {
+    if (pi.offsetTop < window.innerHeight + window.pageYOffset + 20) {
+      pi.classList.add('display-from-side')
+    }
+  }
+
+}
+
+displayItems();
+
+window.addEventListener('scroll', displayItems);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

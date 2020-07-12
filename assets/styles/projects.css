@@ -22,9 +22,8 @@ section {
   margin-bottom: 1rem;
 }
 
-
 .carousel,
-img {
+.carousel > img {
   width: 15rem;
   height: 15rem;
 }

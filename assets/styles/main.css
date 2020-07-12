@@ -8,18 +8,13 @@
 }
 
 body {
+  font-family: 'Calibri', serif;
   height: 100%;
   min-height: 100vh;
   padding-top: 3rem;
-  background-repeat: no-repeat;
-  background-image: linear-gradient(
-    180deg,
-    #00ffff38 3%,
-    #00ffff63 70%,
-    #00ffffad 85%,
-    #00fffff2 95%,
-    white
-  );
+  background-repeat: round;
+  background-size: cover;
+  background-image: url('../images/background.jpg');
   display: flex;
   flex-direction: column;
   line-height: 1.2rem;
@@ -64,9 +59,9 @@ h6 {
 }
 
 .secondary-title {
+  box-shadow: 2px 1px 3px #004cff;
   border: 1px solid grey;
-  border-radius: 50%;
-  height: 6rem;
+  height: 3rem;
   width: 6rem;
   flex-shrink: 0;
   display: flex;
@@ -75,6 +70,14 @@ h6 {
   background: #009fff7d;
   color: #0a244d;
   margin-right: 2rem;
+  border-radius: 50px;
+  background-image: linear-gradient(
+    164deg,
+    #0fb8ce7d 20%, 
+    #00ccff7d 40%, 
+    #009dff60 60%, 
+    #009dff9d 80%
+  );
 }
 
 .third-title {
@@ -96,6 +99,40 @@ h6 {
 }
 
 
+.hide-from-left {
+  visibility: hidden;
+  transform: translateX(-100%);
+}
+
+.hide-from-right {
+  visibility: hidden;
+  transform: translateX(100%);
+}
+
+.hide-in-place {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.display {
+  visibility: visible;
+  opacity: 100;
+  transition: opacity 1.4s;
+}
+
+.display-from-left {
+  visibility: visible;
+  transform: translateX(0);
+  transition: transform 0.8s;
+}
+
+.display-from-side {
+  visibility: visible;
+  transform: translateX(0);
+  transition: transform 0.8s;
+}
+
+
 /***********************
  Home
 ****************************/
@@ -104,8 +141,7 @@ h6 {
   display: flex;
 }
 
-.about i {
-  border: 1px solid black;
+.about img {
   border-radius: 50%;
   height: 10rem;
   width: 10rem;
@@ -131,7 +167,7 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background: #28e3c99c;
+  background: #28c9e38c;
   box-shadow: 0px -4px 14px -4px #104c82;
 }
 
@@ -150,11 +186,6 @@ h6 {
   margin-right: 0.8rem;
 }
 
-footer div {
-  display: flex;
-  flex-direction: column;
-}
-
 .footer-general {
   display: flex;
   align-items: center;
@@ -163,6 +194,14 @@ footer div {
 .footer-details {
   display: flex;
   flex-direction: column;
+}
+
+.social-network {
+  width: 2.5rem;
+}
+
+.footer-general:nth-child(2) > :first-child {
+  margin-right: 1rem;
 }
 
 
