@@ -63,15 +63,27 @@
       <h3 class="main-title">Contact</h3>
 
       <section class="contact">
-        <p>Looking forward to hear from you.</p>
-        <form>
+        <div>
+          <p>Looking forward to hear from you.</p>
+          <h5 class="hide" id="email-success">Thank you! We will be in touch.</h5>
+        </div>
+        <form novalidate>
           <div class="form-row">
             <label for="name">Name</label>
-            <input type="text" id="name" placeholder="Enter your name..">
+            <input type="text" id="name" placeholder="Enter your name.">
           </div>
           <div class="form-row">
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Enter an Email I can reach you at..">
+            <label for="email">
+              Email
+              <abbr title="required" aria-label="required">*</abbr>
+            </label>
+            <div class="helper-container">
+              <input type="email" id="email" placeholder="Enter an Email I can reach you at..">
+              <div class="helper-box">
+                <span class="hide arrow-up"></span>
+                <span class="hide helper-message"></span>
+              </div>
+            </div>
           </div>
           <div class="form-row">
             <label for="content">Content</label>

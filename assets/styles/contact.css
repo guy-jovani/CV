@@ -22,6 +22,10 @@ form {
   padding-left: 1rem;
 }
 
+#email-success {
+  margin-top: 2rem;
+}
+
 .form-row {
   display: flex;
   margin-bottom: 1rem;
@@ -51,6 +55,33 @@ textarea {
   height: 7rem;
 }
 
+.arrow-up {
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid red;
+  margin-left: 15px;
+}
+
+.alert-border {
+  border: 1px solid red;
+}
+
+.helper-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.helper-message {
+  border: 1px solid red;
+  background: pink;
+  padding: 4px;
+  border-radius: 10px;
+  border-top-left-radius: 0;
+  margin-left: 15px;
+}
 
 #submit {
   width: max-content;
