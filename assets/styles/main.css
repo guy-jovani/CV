@@ -14,7 +14,7 @@ body {
   padding-top: 3rem;
   background-repeat: round;
   background-size: cover;
-  background-image: url('../images/background.jpg');
+  background-image: url('../images/background-comp.jpg');
   display: flex;
   flex-direction: column;
   line-height: 1.2rem;
@@ -144,6 +144,7 @@ h6 {
 .about img {
   border-radius: 50%;
   width: 10rem;
+  max-height: 11.5rem;
   flex-shrink: 0;
   font-size: 5rem;
   display: flex;
@@ -154,7 +155,11 @@ h6 {
 .about div {
   display: flex;
   flex-direction: column;
-  white-space: pre;
+  white-space: pre-line;
+}
+
+.about div p {
+  padding-left: 2rem;
 }
 
 /***********************
@@ -310,7 +315,7 @@ NAV BAR - mobile
   }
 
   .nav-opened-links {
-    background-image: url('../images/background.jpg');
+    background-image: url('../images/background-comp.jpg');
     flex-direction: column;
     width: 100vw;
     height: 100vh;
@@ -321,7 +326,7 @@ NAV BAR - mobile
     align-items: center;
     padding-top: 100px;
     line-height: 2;
-    opacity: 100;
+    opacity: 1;
   }
 
   .nav-opened-links li {
@@ -415,6 +420,10 @@ FOOTER - mobile
   .about img {
     margin-bottom: 2rem;
     margin-right: 0;
+  }
+
+  .about div p {
+    padding-left: 0rem;
   }
 }
 

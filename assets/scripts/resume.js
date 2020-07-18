@@ -1,4 +1,6 @@
 
+import '../scripts/index';
+import '../styles/resume.css';
 
 
 const workItems = document.getElementsByClassName('main-work-item');

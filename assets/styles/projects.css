@@ -61,11 +61,11 @@ section {
   width: 15rem;
   display: flex;
   justify-content: space-between;
-  opacity: 10%;
+  opacity: 0.1;
 }
 
 .carousel:hover .carousel-arrows {
-  opacity: 100%;
+  opacity: 1;
 }
 
 .carousel-arrows > button {
@@ -77,6 +77,9 @@ section {
   white-space: pre-line;
 }
 
+.project-item__details > span {
+  font-weight: bolder;
+}
 
 
 /***********************

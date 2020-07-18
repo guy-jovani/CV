@@ -1,5 +1,9 @@
 
 
+import '../scripts/index';
+import '../styles/projects.css';
+
+
 
 const carouselLeftArrows = document.querySelectorAll('.carouselLeftArrow');
 
