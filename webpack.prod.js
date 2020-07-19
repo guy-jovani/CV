@@ -25,7 +25,7 @@ module.exports = merge(common, {
       new HtmlWebpackPlugin({
         filename: '../../index.html',
         template: './index.html',
-        chunks: ['main'],
+        chunks: ['poly', 'main'],
         minify: {
           removeAttributeQuotes: true,
           collapseWhitespace: false,
@@ -35,7 +35,7 @@ module.exports = merge(common, {
       new HtmlWebpackPlugin({
         filename: '../../contact.html',
         template: './contact.html',
-        chunks: ['contact'],
+        chunks: ['poly', 'contact'],
         minify: {
           removeAttributeQuotes: true,
           collapseWhitespace: false,
@@ -45,7 +45,7 @@ module.exports = merge(common, {
       new HtmlWebpackPlugin({
         filename: '../../projects.html',
         template: './projects.html',
-        chunks: ['projects'],
+        chunks: ['poly', 'projects'],
         minify: {
           removeAttributeQuotes: true,
           collapseWhitespace: false,
@@ -55,7 +55,7 @@ module.exports = merge(common, {
       new HtmlWebpackPlugin({
         filename: '../../resume.html',
         template: './resume.html',
-        chunks: ['resume'],
+        chunks: ['poly', 'resume'],
         minify: {
           removeAttributeQuotes: true,
           collapseWhitespace: false,
@@ -86,6 +86,15 @@ module.exports = merge(common, {
             options: {
               url: true
             }
+          },
+        ]
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'babel-loader',
           },
         ]
       }

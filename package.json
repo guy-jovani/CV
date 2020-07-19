@@ -17,8 +17,14 @@
     "url": "https://github.com/guy-jovani/CV/issues"
   },
   "homepage": "https://github.com/guy-jovani/CV#readme",
-  "dependencies": {},
+  "dependencies": {
+    "babel-polyfill": "^6.26.0"
+  },
   "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.6.0",
     "file-loader": "^6.0.0",

@@ -150,3 +150,11 @@ textarea {
   }
 
 }
+
+@media (min-width: 1000px) {
+
+  .contact {
+    justify-content: space-evenly;
+  }
+
+}

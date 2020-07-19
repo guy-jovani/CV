@@ -5,6 +5,7 @@
 
 module.exports = {
   entry: {
+    poly: 'babel-polyfill',
     main: './assets/scripts/index.js',
     contact: './assets/scripts/contact.js',
     resume: './assets/scripts/resume.js',
