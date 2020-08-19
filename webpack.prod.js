@@ -97,7 +97,17 @@ module.exports = merge(common, {
             loader: 'babel-loader',
           },
         ]
-      }
+      },
+      {
+        test: /\.(svg|png|jpg|jpeg|PNG)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[hash].[ext]',
+            outputPath: '../images'
+          }
+        }
+      },
     ]
   }
 });
