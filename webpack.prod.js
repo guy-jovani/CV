@@ -43,6 +43,16 @@ module.exports = merge(common, {
         }
       }),
       new HtmlWebpackPlugin({
+        filename: '../../about.html',
+        template: './about.html',
+        chunks: ['poly', 'main'],
+        minify: {
+          removeAttributeQuotes: true,
+          collapseWhitespace: false,
+          removeComments: true
+        }
+      }),
+      new HtmlWebpackPlugin({
         filename: '../../projects.html',
         template: './projects.html',
         chunks: ['poly', 'projects'],

@@ -1,6 +1,6 @@
 
 import '../styles/emr.css';
-import '../styles/main.css';
+import '../styles/index.css';
 
 
 const toggleNavBarBtn = document.querySelector('.nav-open-collapsed');
