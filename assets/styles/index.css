@@ -134,7 +134,7 @@ h6 {
 
 
 /***********************
- Index
+ Index Page
 ****************************/
 
 header {
@@ -144,7 +144,7 @@ header {
   color: white;
   position: relative;
   top: -3rem;
-  height: 50vh;
+  height: 60vh;
 }
 
 /* .profile-image-container {
@@ -232,10 +232,6 @@ nav {
   line-height: 1;
 }
 
-nav.index {
-  margin-bottom: 0rem;
-}
-
 nav h5 {
   margin-bottom: 0;
 }
@@ -289,11 +285,29 @@ nav a:active {
 
 
 /***********************
- NAV BAR - Home Page
+  Index Page - main
  ***************************/
 
-nav li:hover .link-name {
+.index {
+  height: 8rem;
+}
+
+.index li:hover .link-name span {
+  /* box-shadow: 0px 18px 8px -6px; */
+  transition: transform 0.5s;
+  transform: translateY(-5px);
+  display: inline-block;
+}
+
+.index li:hover .link-name::after {
+  content: '';
+  display: block;
   box-shadow: 0px 18px 8px -6px;
+  position: absolute;
+  top: 0;
+  bottom: 3px;
+  right: 0;
+  left: 0;
 }
 
 .link-name {
@@ -304,21 +318,24 @@ nav li:hover .link-name {
 .index .nav-closed-links {
   display: flex;
   align-items: flex-end;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: center;
-  width: 40rem;
+  /* width: 40rem; */
   align-items: center;
-  height: 24rem;
-  position: fixed;
-  top: 40vh;
+  /* height: 24rem; */
+  position: relative;
+  top: -8.4rem;
 }
 
 .index .nav-closed-links li {
-  margin: 0 0.7rem;
+  margin: 0 0.7rem 1rem 0.7rem;
   height: 11rem;
   width: 11rem;
   cursor: pointer;
-  border-radius: 30px;
+  filter: drop-shadow(0px 0px 10px );
+}
+
+.index .nav-closed-links div {
   clip-path: polygon(26% 100%, 0% 50%, 26% 0, 74% 0, 100% 50%, 74% 100%);
   background-color: black;
   display: flex;
@@ -327,13 +344,9 @@ nav li:hover .link-name {
   text-align: center;
 }
 
-/* .index .nav-closed-links li:nth-child(-n+3) {
-  background-image: linear-gradient(180deg, #fff 30%, #fff0 40%); */
-/* } */
-
-.index .nav-closed-links li:nth-child(-n+3) a {
-  background-image: linear-gradient(180deg, #fff 30%, #d0f0ff 40%);
-}
+/* .index .nav-closed-links li:nth-child(-n+3) div {
+  background-image: linear-gradient(180deg, #57b3ff 30%, #d0f0ff 40%);
+} */
 
 .info {
   position: relative;
@@ -343,12 +356,20 @@ nav li:hover .link-name {
   padding: 0.5rem;
 }
 
-.index a {
+.index div {
   display: block;
   height: 98.7%;
   width: 98.7%;
-  background-image: linear-gradient(180deg, #28c9e38c 30%, #d0f0ff 40%);
+  background-image: linear-gradient(180deg, #57b3ff 20%, #d0f0ff 52%);
   clip-path: polygon(26% 100%, 0% 50%, 26% 0, 74% 0, 100% 50%, 74% 100%);
+}
+
+.index a {
+  height: 100%;
+  width: 100%;
+  
+  color: white;
+  display: block;
 }
 
 .active-link .link-name {
@@ -358,7 +379,8 @@ nav li:hover .link-name {
 
 .index li:hover a {
   text-decoration: none;
-  color: #0034b1;
+  /* color: #0034b1; */
+  color: white;
   box-shadow: none;
   display: inline-block;
 }
@@ -493,7 +515,7 @@ FOOTER - mobile
 
 
 /***********************
- Home - mobile
+ Index Page - mobile
 ****************************/
 @media (max-width: 760px) {
 
