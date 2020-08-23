@@ -301,6 +301,10 @@ header div p {
   flex-direction: column;
 }
 
+.footer-details a {
+  color: white;
+}
+
 .social-network {
   width: 2.5rem;
   background-color: white;
