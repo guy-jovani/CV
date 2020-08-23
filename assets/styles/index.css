@@ -132,6 +132,9 @@ h6 {
   transition: transform 0.8s;
 }
 
+.round {
+  border-radius: 50%;
+}
 
 /***********************
  Index Page
@@ -141,19 +144,17 @@ header {
   display: flex;
   justify-content: center;
   background-image: url(../images/home-link-background.jpg);
+  background-repeat: round;
+  background-size: cover;
   color: white;
   position: relative;
   top: -3rem;
   height: 60vh;
+  box-shadow: 0px -9px 31px 9px #4ea3ef inset;
 }
 
-/* .profile-image-container {
-  background-image: url(../images/formal-cropped-face-2.jpg);
-} */
-
 .profile-image {
-  /* border-radius: 50%; */
-  max-height: 11.5rem;
+  max-height: 13.5rem;
   flex-shrink: 0;
   font-size: 5rem;
   align-self: center;
@@ -170,6 +171,96 @@ header div {
 
 header div p {
   padding-left: 2rem;
+}
+
+.index {
+  height: 8rem;
+}
+
+.pages__list-item:hover .link-name span {
+  transition: transform 0.5s;
+  transform: translateY(-5px);
+  display: inline-block;
+}
+
+.pages__list-item:hover .link-name::after {
+  content: '';
+  display: block;
+  box-shadow: 0px 18px 8px -6px;
+  position: absolute;
+  top: 0;
+  bottom: 3px;
+  right: 0;
+  left: 0;
+}
+
+.link-name {
+  position: relative;
+  top: 1rem;
+}
+
+.pages {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100vw;
+  align-items: center;
+  position: relative;
+  top: -8.4rem;
+}
+
+.pages__list-item {
+  margin: 0 0.7rem 1rem 0.7rem;
+  height: 11rem;
+  width: 11rem;
+  opacity: 0.9;
+  cursor: pointer;
+  filter: drop-shadow(0px 0px 10px);
+}
+
+.pages__link-container {
+  clip-path: polygon(26% 100%, 0% 50%, 26% 0, 74% 0, 100% 50%, 74% 100%);
+  background-color: black;
+  text-align: center;
+  display: block;
+  height: 98.7%;
+  width: 98.7%;
+  background-image: linear-gradient(180deg, #57b3ff 20%, #d0f0ff 52%);
+}
+
+.info {
+  position: relative;
+  top: 3rem;
+  color: #4d5457;
+  line-height: 1.4rem;
+  padding: 0.5rem;
+}
+
+.pages__link-container a {
+  height: 100%;
+  width: 100%;
+  
+  color: white;
+  display: block;
+}
+
+.active-link .link-name {
+  box-shadow: 0px 18px 8px -6px;
+  display: inline-block;
+}
+
+.pages__list-item:hover a {
+  text-decoration: none;
+  color: white;
+  box-shadow: none;
+  display: inline-block;
+}
+
+.index .active-link {
+  display: inline-block;
+  box-shadow: none;
+  font-weight: bold;
 }
 
 /***********************
@@ -212,6 +303,7 @@ header div p {
 
 .social-network {
   width: 2.5rem;
+  background-color: white;
 }
 
 .footer-general:nth-child(2) > :first-child {
@@ -224,12 +316,17 @@ header div p {
  ***************************/
 
 nav {
+  color: white;
+  padding: 3rem 0;
+  position: relative;
+  top: -3rem;
   display: flex;
   justify-content: center;
   font-family: 'Roboto Slab', serif;
-  margin-bottom: 5rem;
-  color: #4d5457;
+  margin-bottom: 3rem;
   line-height: 1;
+  background-image: url(../images/home-link-background.jpg);
+  box-shadow: 0px -3px 14px 8px #4ea3ef inset;
 }
 
 nav h5 {
@@ -251,9 +348,10 @@ nav li {
 
 nav li:hover a {
   text-decoration: none;
-  color: #0034b1;
-  box-shadow: 0px 18px 5px -7px;
+  color: white;
+  box-shadow: 0px 18px 5px -5px;
   display: block;
+  font-weight: bold;
 }
 
 nav li:hover span {
@@ -265,12 +363,12 @@ nav li:hover span {
 nav a,
 nav a:focus {
   text-decoration: none;
-  color: #4d5457;
+  color: white;
 }
 
 nav a:active {
   text-decoration: none;
-  color: #0034b1;
+  /* color: #0034b1; */
 }
 
 .nav-open-collapsed {
@@ -278,124 +376,17 @@ nav a:active {
 }
 
 .active-link {
-  color: #0034b1;
-  box-shadow: 0px 18px 5px -7px;
+  box-shadow: 0px 18px 5px -5px;
   display: block;
-}
-
-
-/***********************
-  Index Page - main
- ***************************/
-
-.index {
-  height: 8rem;
-}
-
-.index li:hover .link-name span {
-  /* box-shadow: 0px 18px 8px -6px; */
-  transition: transform 0.5s;
-  transform: translateY(-5px);
-  display: inline-block;
-}
-
-.index li:hover .link-name::after {
-  content: '';
-  display: block;
-  box-shadow: 0px 18px 8px -6px;
-  position: absolute;
-  top: 0;
-  bottom: 3px;
-  right: 0;
-  left: 0;
-}
-
-.link-name {
-  position: relative;
-  top: 1rem;
-}
-
-.index .nav-closed-links {
-  display: flex;
-  align-items: flex-end;
-  /* flex-wrap: wrap; */
-  justify-content: center;
-  /* width: 40rem; */
-  align-items: center;
-  /* height: 24rem; */
-  position: relative;
-  top: -8.4rem;
-}
-
-.index .nav-closed-links li {
-  margin: 0 0.7rem 1rem 0.7rem;
-  height: 11rem;
-  width: 11rem;
-  cursor: pointer;
-  filter: drop-shadow(0px 0px 10px );
-}
-
-.index .nav-closed-links div {
-  clip-path: polygon(26% 100%, 0% 50%, 26% 0, 74% 0, 100% 50%, 74% 100%);
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-/* .index .nav-closed-links li:nth-child(-n+3) div {
-  background-image: linear-gradient(180deg, #57b3ff 30%, #d0f0ff 40%);
-} */
-
-.info {
-  position: relative;
-  top: 3rem;
-  color: #4d5457;
-  line-height: 1.4rem;
-  padding: 0.5rem;
-}
-
-.index div {
-  display: block;
-  height: 98.7%;
-  width: 98.7%;
-  background-image: linear-gradient(180deg, #57b3ff 20%, #d0f0ff 52%);
-  clip-path: polygon(26% 100%, 0% 50%, 26% 0, 74% 0, 100% 50%, 74% 100%);
-}
-
-.index a {
-  height: 100%;
-  width: 100%;
-  
-  color: white;
-  display: block;
-}
-
-.active-link .link-name {
-  box-shadow: 0px 18px 8px -6px;
-  display: inline-block;
-}
-
-.index li:hover a {
-  text-decoration: none;
-  /* color: #0034b1; */
-  color: white;
-  box-shadow: none;
-  display: inline-block;
-}
-
-.index .active-link {
-  color: #0034b1;
-  display: inline-block;
-  box-shadow: none;
+  font-weight: bold;
+  font-size: larger;
 }
 
 /***********************
 NAV BAR - mobile
 ***************************/
 
-@media (max-width: 640px) {
+@media (max-width: 750px) {
   
   .nav-open-collapsed {
     display: flex;
@@ -418,7 +409,7 @@ NAV BAR - mobile
   
   nav {
     justify-content: space-between;
-    padding: 0 2rem;
+    padding: 3rem 2rem;
   }
   
   .nav-closed-links {
@@ -452,6 +443,13 @@ NAV BAR - mobile
     text-align: center;
   }
 
+  nav a,
+  nav a:focus,
+  nav a:active,
+  .nav-open-collapsed .glyphicon-remove {
+    color: #705457;
+  }
+
   .nav-opened-links li:hover a {
     text-decoration: none;
     color: #0034b1;
@@ -461,6 +459,8 @@ NAV BAR - mobile
 
   .active-link {
     box-shadow: none;
+    color: #0034b1;
+    font-weight: normal;
   }
   
   .nav-opened-links li:hover span {
@@ -517,44 +517,151 @@ FOOTER - mobile
 /***********************
  Index Page - mobile
 ****************************/
-@media (max-width: 760px) {
 
-  .about img {
-    margin-right: 1rem;
+@media (max-width: 540px) {
+
+  header {
+    line-height: 2rem;
   }
 
-  .about div {
-    white-space: normal;
+  h3 {
+    font-size: 2.5rem;
+  }
+
+  h5 {
+    font-size: 1.4rem;
+  }
+
+  .profile-image {
+    max-height: 10rem;
   }
 
 }
 
-@media (max-width: 559px) {
+@media (max-height: 707px) {
 
-  .about {
-    flex-direction: column;
+  .index {
+    height: 4rem;
   }
 
-  .about img {
-    margin-bottom: 2rem;
-    margin-right: 0;
+  .profile-image {
+    max-height: 10.5rem;
   }
 
-  .about div p {
-    padding-left: 0rem;
+  .pages {
+    top: -7.4rem;
   }
+
+  .pages__list-item {
+    height: 9rem;
+    width: 9rem;
+  }
+
+}
+
+@media (max-height: 615px) {
+
+  .profile-image {
+    align-self: auto;
+    margin-top: 3rem;
+  }
+
+  header div {
+    position: relative;
+    top: -3rem;
+  }
+
+}
+
+@media (max-height: 520px) {
+
+  h3 {
+    font-size: 2.5rem;
+  }
+
+  h5 {
+    font-size: 1.3rem;
+  }
+
+  .profile-image {
+    align-self: auto;
+    margin-top: 2rem;
+    max-height: 9rem;
+  }
+
+  header div {
+    position: relative;
+    top: -3rem;
+  }
+
+}
+
+@media (max-height: 430px) {
+
+  h3 {
+    font-size: 2.2rem;
+  }
+
+  h5 {
+    font-size: 1.1rem;
+  }
+
+  .profile-image {
+    max-height: 8rem;
+  }
+
+  .pages {
+    top: -7rem;
+  }
+
+  .pages__list-item {
+    height: 8rem;
+    width: 8rem;
+    font-size: smaller;
+  }
+
+  .pages__link-container {
+    clip-path: polygon(20% 100%, 0% 50%, 20% 0, 80% 0, 100% 50%, 80% 100%);
+  }
+
+}
+
+@media (max-height: 390px) {
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+  }
+
+  .profile-image {
+    max-height: 7rem;
+  }
+
+  .pages {
+    top: -6.5rem;
+  }
+
+  .pages__list-item {
+    height: 7rem;
+    width: 7rem;
+  }
+
+  .info {
+    top: 2rem;
+  }
+
 }
 
 
+@media (max-width: 991px) {
 
+  .index {
+    height: max-content;
+  }
 
-
-
-
-
-
-
-
-
+}
 
 
