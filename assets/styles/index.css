@@ -54,6 +54,14 @@ h6 {
   margin-bottom: 3rem;
 }
 
+@media (min-width: 1000px) {
+
+  .main-title {
+    align-self: center;
+  }
+
+}
+
 .glyphicon-new-window {
   font-size: 13px;
 }
@@ -143,7 +151,7 @@ h6 {
 header {
   display: flex;
   justify-content: center;
-  background-image: url(../images/home-link-background.jpg);
+  background-image: url('../images/home-link-background-comp.jpg');
   background-repeat: round;
   background-size: cover;
   color: white;
@@ -158,7 +166,7 @@ header {
   flex-shrink: 0;
   font-size: 5rem;
   align-self: center;
-  clip-path: polygon(26% 100%, 0% 50%, 26% 0, 74% 0, 100% 50%, 74% 100%);
+  /* clip-path: polygon(26% 100%, 0% 50%, 26% 0, 74% 0, 100% 50%, 74% 100%); */
 }
 
 header div {
@@ -196,7 +204,8 @@ header div p {
 
 .link-name {
   position: relative;
-  top: 1rem;
+  top: 2rem;
+  font-size: larger;
 }
 
 .pages {
@@ -220,7 +229,7 @@ header div p {
 }
 
 .pages__link-container {
-  clip-path: polygon(26% 100%, 0% 50%, 26% 0, 74% 0, 100% 50%, 74% 100%);
+  /* clip-path: polygon(26% 100%, 0% 50%, 26% 0, 74% 0, 100% 50%, 74% 100%); */
   background-color: black;
   text-align: center;
   display: block;
@@ -231,10 +240,11 @@ header div p {
 
 .info {
   position: relative;
-  top: 3rem;
-  color: #4d5457;
+  top: 4rem;
+  color: #1a33bd;
   line-height: 1.4rem;
-  padding: 0.5rem;
+  padding: 0.8rem;
+  font-size: large;
 }
 
 .pages__link-container a {
@@ -307,7 +317,6 @@ header div p {
 
 .social-network {
   width: 2.5rem;
-  background-color: white;
 }
 
 .footer-general:nth-child(2) > :first-child {
@@ -329,7 +338,7 @@ nav {
   font-family: 'Roboto Slab', serif;
   margin-bottom: 3rem;
   line-height: 1;
-  background-image: url(../images/home-link-background.jpg);
+  background-image: url('../images/home-link-background-comp.jpg');
   box-shadow: 0px -3px 14px 8px #4ea3ef inset;
 }
 
@@ -522,6 +531,14 @@ FOOTER - mobile
  Index Page - mobile
 ****************************/
 
+@media (max-width: 991px) {
+
+  .index {
+    height: max-content;
+  }
+
+}
+
 @media (max-width: 540px) {
 
   header {
@@ -559,6 +576,20 @@ FOOTER - mobile
   .pages__list-item {
     height: 9rem;
     width: 9rem;
+  }
+
+  .info {
+    top: 3rem;
+    padding: 0.7rem;
+    font-size: unset;
+  }
+
+}
+
+@media (max-height: 707px) and (max-width: 832px) {
+
+  .index {
+    height: max-content;
   }
 
 }
@@ -627,7 +658,36 @@ FOOTER - mobile
   .pages__link-container {
     clip-path: polygon(20% 100%, 0% 50%, 20% 0, 80% 0, 100% 50%, 80% 100%);
   }
+  
+  @supports (clip-path: polygon(26% 100%, 0% 50%, 26% 0)) {
 
+    .pages__link-container {
+      clip-path: polygon(20% 100%, 0% 50%, 20% 0, 80% 0, 100% 50%, 80% 100%);
+    }
+    
+  }
+
+}
+
+@supports not (clip-path: polygon(26% 100%, 0% 50%, 26% 0)) {
+  
+  .profile-image,
+  .pages__link-container {
+    border-radius: 50%;
+  }
+
+}
+
+@supports (clip-path: polygon(26% 100%, 0% 50%, 26% 0)) {
+
+  .profile-image {
+    clip-path: polygon(26% 100%, 0% 50%, 26% 0, 74% 0, 100% 50%, 74% 100%);
+  }
+
+  .pages__link-container {
+    clip-path: polygon(26% 100%, 0% 50%, 26% 0, 74% 0, 100% 50%, 74% 100%);
+  }
+  
 }
 
 @media (max-height: 390px) {
@@ -653,19 +713,15 @@ FOOTER - mobile
     width: 7rem;
   }
 
+  .link-name {
+    top: 1rem;
+  }
+
   .info {
-    top: 2rem;
+    top: 1rem;
   }
 
 }
 
-
-@media (max-width: 991px) {
-
-  .index {
-    height: max-content;
-  }
-
-}
 
 

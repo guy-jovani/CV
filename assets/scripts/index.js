@@ -6,11 +6,13 @@ import '../styles/index.css';
 const toggleNavBarBtn = document.querySelector('.nav-open-collapsed');
 const navLinks = document.querySelector('.nav-closed-links');
 
-toggleNavBarBtn.addEventListener('click', () => {
-  navLinks.classList.toggle('nav-opened-links');
-  toggleNavBarBtn.firstElementChild.classList.toggle('glyphicon-align-justify');
-  toggleNavBarBtn.firstElementChild.classList.toggle('glyphicon-remove');
-});
+if (toggleNavBarBtn) {
+  toggleNavBarBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('nav-opened-links');
+    toggleNavBarBtn.firstElementChild.classList.toggle('glyphicon-align-justify');
+    toggleNavBarBtn.firstElementChild.classList.toggle('glyphicon-remove');
+  });
+}
 
 
 
