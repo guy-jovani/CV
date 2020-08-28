@@ -185,7 +185,7 @@ header div p {
   height: 8rem;
 }
 
-@media not (pointer: none) {
+@media (pointer: fine) {
   .pages__list-item:hover .link-name span {
     transition: transform 0.5s;
     transform: translateY(-5px);
@@ -364,7 +364,7 @@ nav li {
 }
 
 
-@media not (pointer: none) {
+@media (pointer: fine) {
   nav li:hover a {
     text-decoration: none;
     color: white;
@@ -465,7 +465,7 @@ NAV BAR - mobile
     color: #705457;
   }
   
-  @media not (pointer: none) {
+  @media (pointer: fine) {
 
     .nav-open-collapsed:hover {
       background-color: #40a0d780;
