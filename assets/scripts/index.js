@@ -15,7 +15,7 @@ if (toggleNavBarBtn) {
 }
 
 if (document.querySelector('.profession-wrapper')) {
-  const supportsAnimation =
+  const supportsAnimationCSS =
     'CSS' in window &&
     window.innerWidth > 420 &&
     CSS.supports('clip-path', 'polygon(0% 0%, 0% 100%, 0% 100%, 0% 0%)');
@@ -41,7 +41,7 @@ if (document.querySelector('.profession-wrapper')) {
     );
   };
 
-  supportsAnimation ? animateDeveloper() : null;
+  supportsAnimationCSS ? animateDeveloper() : null;
 
   const switchActiveProfession = () => {
     professionActive.classList.replace(
@@ -49,7 +49,7 @@ if (document.querySelector('.profession-wrapper')) {
       'profession-inactive'
     );
 
-    supportsAnimation ? null : professionActive.animate(
+    supportsAnimationCSS ? null : professionActive.animate(
       [
         { top: '0', opacity: '1', offset: 0 },
         { top: '100%', offset: 1 },
@@ -70,10 +70,12 @@ if (document.querySelector('.profession-wrapper')) {
       'profession-inactive',
       'profession-active'
     );
-    supportsAnimation ? animateDeveloper() : null;
+    supportsAnimationCSS ? animateDeveloper() : null;
   };
 
-  document
-    .querySelector('.profession-wrapper')
-    .addEventListener('animationend', switchActiveProfession);
+  if ( typeof(professionActive.animate) != "undefined" ) {
+    document
+      .querySelector('.profession-wrapper')
+      .addEventListener('animationend', switchActiveProfession);
+  }
 }

@@ -97,6 +97,9 @@ module.exports = merge(common, {
               url: true
             }
           },
+          {
+            loader: 'postcss-loader'
+          }
         ]
       },
       {
