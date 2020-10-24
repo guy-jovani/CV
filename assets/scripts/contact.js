@@ -10,25 +10,29 @@ const reEmail = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))
 const form = document.querySelector('form');
 const submitBtn = document.getElementById('submit');
 const formEmail = document.getElementById('email');
-const emailSuccess = document.getElementById('email-success');
-const emailHelper = document.querySelectorAll('.form-row > .helper-container span');
+const emailSendSuccess = document.getElementById('email-send-success');
+const emailHelperInvalidMail = document.querySelectorAll('.helper-box-invalid-mail span');
+const emailHelperEmailNotSent = document.querySelectorAll('.helper-box-email-not-sent span');
 
-
-const showEmailAlerts = message => {
-  emailHelper.forEach(sp => {
+const showEmailAlerts = (element, message) => {
+  element.forEach(sp => {
     sp.classList.add('show');
     if (sp.classList.contains('helper-message')) {
       sp.innerHTML = message;
     }
   });
-  formEmail.classList.add('alert-border');
+  if (element === emailHelperInvalidMail) {
+    formEmail.classList.add('alert-border');
+  }
 }
 
-const removeEmailAlerts = () => {
-  emailHelper.forEach(sp => {
+const removeEmailAlerts = (element) => {
+  element.forEach(sp => {
     sp.classList.remove('show');
   });
-  formEmail.classList.remove('alert-border');
+  if (element === emailHelperInvalidMail) {
+    formEmail.classList.remove('alert-border');
+  }
 }
 
 
@@ -37,11 +41,12 @@ submitBtn.addEventListener('click', event => {
   const inputs = event.target.closest('form').children;
 
   if (!formEmail.value) {
-    return showEmailAlerts("This field is required.");
+    return showEmailAlerts(emailHelperInvalidMail, "This field is required.");
   } else if (!reEmail.test(formEmail.value.toLowerCase())) {
-    return showEmailAlerts("Invalid email.");
+    return showEmailAlerts(emailHelperInvalidMail, "Invalid email.");
   } else {
-    removeEmailAlerts();
+    removeEmailAlerts(emailHelperInvalidMail);
+    removeEmailAlerts(emailHelperEmailNotSent);
   }
 
   axios.post('https://my-email-service.herokuapp.com/', {
@@ -52,16 +57,22 @@ submitBtn.addEventListener('click', event => {
   })
   .then(res => {
     if (res.data.type === 'success') {
-      removeEmailAlerts();
+      removeEmailAlerts(emailHelperInvalidMail);
+      removeEmailAlerts(emailHelperEmailNotSent);
       form.reset();
-      emailSuccess.classList.add('show');
+      emailSendSuccess.classList.add('show');
     }
   })
   .catch(err => {
-    if (err.response.data.type === 'failure' &&
-        err.response.data.messages === 'Invalid email.') {
-      showEmailAlerts("Invalid email.");
-    }
+    if (err.response.data.type === 'failure') {
+      if (err.response.data.messages === 'Invalid email.') {
+        showEmailAlerts(emailHelperInvalidMail, "Invalid email.");
+      } else {
+        showEmailAlerts(emailHelperEmailNotSent,
+                        err.response.data.messages.charAt(0).toUpperCase() +
+                        err.response.data.messages.slice(1));
+      }
+    } 
   });
 });
 

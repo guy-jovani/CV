@@ -43,6 +43,16 @@ module.exports = merge(common, {
         }
       }),
       new HtmlWebpackPlugin({
+        filename: '../../about.html',
+        template: './about.html',
+        chunks: ['poly', 'about'],
+        minify: {
+          removeAttributeQuotes: true,
+          collapseWhitespace: false,
+          removeComments: true
+        }
+      }),
+      new HtmlWebpackPlugin({
         filename: '../../projects.html',
         template: './projects.html',
         chunks: ['poly', 'projects'],
@@ -87,6 +97,9 @@ module.exports = merge(common, {
               url: true
             }
           },
+          {
+            loader: 'postcss-loader'
+          }
         ]
       },
       {

@@ -24,6 +24,11 @@ module.exports = merge(common, {
       chunks: ['contact'],
     }),
     new HtmlWebpackPlugin({
+      filename: './about.html',
+      template: './about.html',
+      chunks: ['about'],
+    }),
+    new HtmlWebpackPlugin({
       filename: './projects.html',
       template: './projects.html',
       chunks: ['projects'],

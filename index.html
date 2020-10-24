@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-178409109-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-178409109-1');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -14,44 +23,67 @@
 
   </head>
   <body>
-    <nav>
-      <div>
-        <h3>Guy Jovany</h3>
-        <h5>Web Developer</h5>
-      </div> 
-      <button class="nav-open-collapsed" type="button">
-        <i class="glyphicon glyphicon-align-justify"></i>
-      </button>
-      <ul class="nav-closed-links">
-        <li>
-          <a href="./index.html" class="active-link"><span>Home</span></a>
+    <header>
+      <img class="profile-image" src="./assets/images/formal-cropped-face-2-comp.jpg" alt="">
+      <div class="header-main-div">
+        <h3><span>Guy</span> <span>Jovany</span></h3>
+        <h5 class="profession-header">
+          <span class="profession-wrapper">
+            <!-- <span class="profession profession-active">Web</span> -->
+            <span class="profession profession-active">Full Stack</span>
+            <span class="profession profession-inactive">Front End</span>
+            <span class="profession profession-inactive">Back End</span>
+          </span>
+          <span class="developer">Developer</span>
+        </h5>
+      </div>
+    </header> 
+
+    <main class="index">
+      <ul class="pages">
+        <li class="pages__list-item">
+          <div class="pages__link-container">
+            <a href="./index.html" class="active-link">
+              <span class="link-name"><span>Home</span></span>
+              <p class="info">Welcome!</p>
+            </a>
+          </div>
         </li>
-        <li>
-          <a href="./resume.html"><span>Resume</span></a>
+        <li class="pages__list-item">
+          <div class="pages__link-container">
+            <a href="./about.html">
+              <span class="link-name"><span>About</span></span>
+              <p class="info">A little bit about myself.</p>
+            </a>
+          </div>
         </li>
-        <li>
-          <a href="./projects.html"><span>Projects</span></a>
+        <li class="pages__list-item">
+          <div class="pages__link-container">
+            <a href="./resume.html">
+              <span class="link-name">
+                <span>Resume</span>
+              </span>
+              <p class="info">Learn more about my knowledge.</p>
+            </a>
+          </div>
         </li>
-        <li>
-            <a href="./contact.html"><span>Contact</span></a>
+        <li class="pages__list-item">
+          <div class="pages__link-container">
+            <a href="./projects.html">
+              <span class="link-name"><span>Projects</span></span>
+              <p class="info">View my earlier projects.</p>
+            </a>
+          </div>
+        </li>
+        <li class="pages__list-item">
+          <div class="pages__link-container">
+            <a href="./contact.html">
+              <span class="link-name"><span>Contact</span></span>
+              <p class="info">Reach out and hire me.</p>
+            </a>
+          </div>
         </li>
       </ul>
-    </nav>
-    <main>
-
-      <section class="about">
-        <img src="./assets/images/profile2-comp.jpg" alt="">
-        <div>
-          <h5>Before the technical stuff..</h5>
-          <p>
-            I'm Guy, an enthusiast programmer in general and in Web Development in particular. <br>
-            My current goal is to make myself a professional in the world of web development, <br>
-            so i keep studying and improving my skills. <br>
-            I'm highly motivated, self driven and eager to be the best. <br>
-          </p>
-        </div>
-      </section>
-
     </main>
 
     <footer>
@@ -59,18 +91,22 @@
         <i class="glyphicon glyphicon-envelope contact-icon"></i>
         <span class="footer-details">
           <span>Contact</span>
-          <a href="mailto:guy.jovany@huji.ac.il">guy.jovany@huji.ac.il</a>
+          <a href="mailto:guy.jovany@mail.huji.ac.il">guy.jovany@mail.huji.ac.il</a>
         </span>
       </address>
       <div class="footer-general">
-        <a href="https://www.linkedin.com/in/guy-jovany-b33451169" target="_blank"><img src="./assets/images/icons8-linkedin.svg" class="social-network"></a>
-        <a href="https://www.facebook.com/guy.jovany" target="_blank"><img src="./assets/images/icons8-facebook.svg" class="social-network"></a>
+        <a href="https://www.linkedin.com/in/guy-jovany-b33451169" target="_blank">
+          <img src="./assets/images/icons8-linkedin-2.svg" class="social-network">
+        </a>
+        <a href="https://www.facebook.com/guy.jovany" target="_blank">
+          <img src="./assets/images/icons8-facebook-2.svg" class="social-network round">
+        </a>
       </div>
       <p class="footer-general">
         <span class="footer-rights-icon">&copy</span>
         <span class="footer-details">
           <span>
-            Based on a template of <a href="https://wix.com" target="_blank">Wix.com <i class="glyphicon glyphicon-new-window"></i></a>
+            Inspired by a template of <a href="https://wix.com" target="_blank">Wix.com <i class="glyphicon glyphicon-new-window"></i></a>
           </span>
         </span>
       </p>
