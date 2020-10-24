@@ -73,10 +73,6 @@ section {
   border: none;
 }
 
-.project-item__details {
-  white-space: pre-line;
-}
-
 .project-item__details > span {
   font-weight: bolder;
 }
@@ -153,7 +149,6 @@ section {
   .project-item__project-info > h6:nth-child(n + 2) {
     position: relative;
     left: 7rem;
-    white-space: pre-line;
     top: -4rem;
   }
 }

@@ -36,10 +36,6 @@ main {
   margin-bottom: 1rem;
 }
 
-.main-work-item__details {
-  white-space: pre-line;
-}
-
 .main-work-item__details span {
   font-weight: bold;
 }
